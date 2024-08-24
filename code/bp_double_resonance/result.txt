@@ -1,0 +1,2 @@
+CMAEvolutionStrategyResult(xbest=array([1.1810114 , 0.10927926, 0.66390911, 0.77583343, 0.48260363]), fbest=0.23699531505254628, evals_best=398, evaluations=6833, iterations=854, xfavorite=array([1.15617528, 0.10819665, 0.72098769, 0.90543892, 0.5       ]), stds=array([2.22534852e-11, 5.86456205e-09, 1.45698641e-11, 1.79905954e-11,
+       5.98526632e-08]), stop={'tolfun': 1e-11})
