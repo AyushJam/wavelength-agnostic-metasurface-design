@@ -1,3 +1,20 @@
+'''
+Code to run an optimization. 
+
+Author: Ayush M. Jamdar
+
+Before running: 
+	1. Check config settings in config.py
+	2. Check/Enter materials in materials.py
+
+Output:
+	1. Creates a folder "outcmaes" will all simulation data
+	2. Prints iteration info in the terminal 
+	3. Saves absorption spectrum data in text files for plotting
+
+Use plotter.py for plotting.
+'''
+
 import numpy as np
 import cma
 from materials import refractive_indices
@@ -62,8 +79,12 @@ x = get_random_params(
     L_MIN, L_MAX, H_MIN, H_MAX, C_MIN, C_MAX, R_MIN, R_MAX, N_HOLES
 )
 
+options = cma.CMAOptions()
+options.set('tolfun', 1e-6)  # stop if change in objective is less than tolerance
+options["bounds"] = [lower_bounds, upper_bounds] 
+
 xopt, es = cma.fmin2(
-    objective_function, x, SIGMA, options={"bounds": [lower_bounds, upper_bounds]}
+    objective_function, x, SIGMA, options=options
 )
 
 # save the result to a file
@@ -73,7 +94,7 @@ with open("result.txt", "w") as f:
 # Save spectrum and absorption data
 save_spectrum_data(
     xopt, 
-    f_sampled, 
+    f_spectrum, 
     N_HOLES,
     ep1_diel,
     epbkg,
