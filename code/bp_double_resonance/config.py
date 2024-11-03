@@ -21,6 +21,9 @@ cavity_material = "Air"
 # start to end wavelengths (in um) for plotting
 start_wavelength = 1.2
 end_wavelength = 1.7 
+N_SAMP = 100 # number of frequency samples for plotting
+f_spectrum = np.linspace(1/end_wavelength, 1/start_wavelength, N_SAMP)
+
 
 # array of target wavelengths (in um)
 f_sampled = np.array([1 / 1.300, 1 / 1.550])
