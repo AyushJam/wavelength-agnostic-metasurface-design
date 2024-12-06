@@ -1,6 +1,6 @@
 # About 
 - This repository hosts RCWA simulation and CMA-ES optimization code, the conceptualization of which is published by Ayush M. Jamdar et al., "Wavelength-Agnostic Design of Next Generation 2D Photodetectors" (2024). This research was conducted at IIT Madras in 2023-24 under the supervision of Prof. Srini Krishnamurthy, Prof. Rituraj (IIT Kanpur), and Prof. Sivarama Krishnan. 
-- [arXiv]([https://www.perplexity.ai](https://arxiv.org/abs/2408.10601))
+- [arXiv](https://arxiv.org/abs/2408.10601)
 - Optics Express
   
 # Contents
